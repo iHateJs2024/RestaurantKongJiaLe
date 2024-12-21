@@ -1,0 +1,670 @@
+/*
+    Author: Kong Jia Le';
+    Theme: Restaurant Food Order;
+    version: 1.0;
+*/
+
+/*Navigation bar CSS starts here!*/
+  /*Navigation bar CSS*/
+  .main-header {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eae4d8;
+    box-shadow: 0 3px 10px #0000001a;
+  }
+
+  /*Logo image CSS*/
+  .contour-cafe-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px; 
+  }
+
+  /*Middle navigation bar CSS*/
+  .middle-section {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 1103.6px;
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+
+  /*Logo and links CSS*/
+  .logo,
+  a {
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    padding: 0px 8px;
+  }
+
+  /*Logo link CSS*/
+  .logo-link {
+    height: 100%;
+  }
+
+  /*Unordered list CSS*/
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;  
+  }
+
+  /*List items Utama and Tempahan links CSS*/
+  .li-utama,
+  .li-tempahan {
+    margin-left: 26px;
+    margin-right: 26px;
+    display: inline;
+  }
+
+  /*List items Log Masuk/Daftar links CSS*/
+  .li-logmasuk-daftar {
+    margin-left: 26px;
+    display: inline;
+  }
+
+  /*Utama link CSS*/
+  .home-link {
+    color: rgb(194, 138, 132);
+    position: relative;
+    width: max-content;
+  }
+
+  /*Before Utama link appears CSS*/
+  .home-link::before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    background-color: rgb(194, 138, 132);
+    top: 100%;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 20px;
+    transition: 0.50s ease;
+    transform: scaleX(1);
+    transform-origin: right;  /* Set the origin of the animation to the left */
+    transition: transform 0.5s ease;  /* Transition the scale */
+    cursor: pointer;
+  }
+
+  /*Tempahan link CSS*/
+  .order-link {
+    position: relative;
+  }
+
+  /*Hovering Tempahan link CSS*/
+  .order-link:hover {
+    color: rgb(194, 138, 132);
+  }
+
+  /*Log Masuk/Daftar link CSS*/
+  .login-register-link {
+    position: relative;
+  }
+
+  /*Hovering Log Masuk/Daftar link CSS*/
+  .login-register-link:hover {
+    color: rgb(194, 138, 132);
+  }
+
+  /*After Tempahan and Log Masuk/Daftar link appears CSS*/
+  .order-link::after,
+  .login-register-link::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    background-color: rgb(194, 138, 132);
+    top: 100%;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    border-radius: 20px;
+    transform: scaleX(0); 
+    /*Underline starts from center to left and right */
+    transition: transform 0.5s ease-out;  /* Transition the scale */
+    cursor: pointer;
+  }
+
+  /*After Hovering Tempahan and Log Masuk/Daftar link appears CSS*/
+  .order-link:hover::after,
+  .login-register-link:hover::after {
+    transform: scaleX(1);
+  }
+/*Navigation bar CSS ends here!*/
+
+/*Background image CSS starts here*/
+.div-background-image {
+  background-image: url("https://ucarecdn.com/bfaaf6bc-7d48-4b9f-8766-92f6ae904c41/-/crop/6000x3376/0,0/-/resize/1600x900/");
+  height: 170px;
+  padding: 90px 30px;
+  background-size: cover;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  position: relative;
+  background-color: rgb(194, 138, 132);
+}
+/*Background image CSS ends here*/
+
+/*Banner CSS starts here*/
+  .main-banner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 165.2px;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    bottom: 30px;
+  }
+
+  .sub-banner {
+    width: 1103.6px;
+  }
+
+  .venue-detail-container {
+    background-color: #eae4d8;;
+    width: 338px;
+    height: 115.20px;
+    border-radius: 10px;
+    padding-left: 45px;
+    padding-right: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .cafe-name-and-location-icon {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cafe-name {
+    font-size: 36px;
+    font-weight: 600;
+  }
+
+  .div-banner-map-link {
+    width: 46px;
+    height: 46px;
+  }
+
+  .banner-map-link {
+    display: flex;
+    align-items: center;
+    background-color: rgb(194, 138, 132);
+    width: 30px;
+    height: 46px;
+    border-radius: 100px;
+  }
+
+  .banner-map-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+  }
+
+  .div-banner-call-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+  }
+
+  .banner-call-icon {
+    padding-top: 5px;
+    padding-left: 3px;
+    width: 18px;
+  }
+
+  .phone-number,
+  .location {
+    color: rgb(140, 140, 140);
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .div-banner-location-icon {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin-bottom: 2px;
+  }
+  
+  .div-phone-number,
+  .div-address {
+    padding-left: 15px;
+    line-height: 12px;
+  }
+
+  .div-work-hour {
+    display: flex;
+    align-items: center;
+  }
+
+  .div-banner-time {
+    display: flex;
+    align-items: center;
+  }
+
+  .div-open-work-hour-button {
+    display: flex;
+    align-items: center;
+  }
+
+  .open-work-hour-button {
+    display: flex;
+    margin-left: 15px;
+    width: 100px;
+    font-family: Barlow;
+    font-weight: 500;
+    font-size: 12px;
+    background-color: transparent;
+    border: none;
+    color: rgb(140, 140, 140);
+    padding: 0px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .open-work-hour-button.before-open-time {
+    font-size: 12px;
+    color: red;
+  }
+
+  .open-work-hour-button.before-open-time:hover {
+    color: rgb(161, 0, 0);
+  }
+
+  .drop-down-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .drop-down-icon {
+    width: 13px;
+    height: 5px;
+    object-fit: cover;
+  }
+
+  .drop-down-icon.close {
+    visibility: hidden;
+  }
+
+  .open-work-hour-button:hover {
+    color: black;
+  }
+/*Banner CSS ends here*/
+
+/*Opening hours pop up modal CSS starts here*/
+.open-hours-menu-dialog {
+  width: 450px;
+  padding: 0px;
+  border: none;
+  background-color: #eae4d8;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #2c2c2c26;
+  overflow: hidden;
+}
+
+.open-hours-menu-dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.open-hours-menu-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  animation: fadeIn 0.3s ease both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }to {
+    opacity: 1;
+  }
+}
+
+.inner-modal-above {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  height: 33.6px;
+  padding: 24px 25px;
+  box-shadow: 0 0 20px rgba(44, 44, 44, 0.149);
+}
+
+.opening-hours-text {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.x-button {
+  height: 32px;
+  padding: 0px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.close-button-image {
+  width: 24px;  
+}
+
+.inner-modal-bottom {
+  max-height: 507.4px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 10px 32px;
+}
+
+.div-day-inner-modal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 386px;
+  height: 43px;
+  margin: 12px 0;
+  border-bottom: solid 0.8px rgb(204, 204, 204);
+}
+
+.first-day-inner-modal {
+  color: rgb(194, 138, 132);
+  font-weight: 700;
+}
+
+.days-inner-modal,
+.time-inner-modal,
+.first-day-inner-modal,
+.first-time-inner-modal {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.days-inner-modal {
+  font-weight: 500;
+}
+
+.first-time-inner-modal {
+  color: rgb(194, 138, 132);
+  font-weight: 700;
+}
+
+.time-inner-modal {
+  font-weight: 400;
+}
+
+.div-Sunday-inner-modal {
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  margin-bottom: 10px;
+}
+
+body.blur-hide-scroll-bar {
+  overflow: hidden;
+}
+/*Opening hours pop up modal CSS ends here*/
+
+/*Navigation bar Food Category CSS starts here!*/
+
+.food-section {
+  background-color: rgb(224, 224, 224);
+}
+
+.navigation-bar-food-category {
+  position: sticky;
+  top: 99.5px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  background-color: rgb(234, 228, 216);
+  box-shadow: 0 8px 7px #0000001a;
+}
+
+.nav-food-category-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 1103.6px;
+  padding: 0px 15px;
+}
+
+.ul-food-category {
+  display: flex;
+}
+
+.li-food-category {
+  margin-right: 25px;
+}
+
+.food-category-link {
+  color: rgb(194, 138, 132);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 4px 10px;
+}
+
+.food-category-link:hover {
+  border-color: rgb(194, 138, 132);
+  border: solid;
+  border-radius: 15px;
+  border-width: 1.6px;
+}
+
+.food-category-link:active {
+  border: none;
+  background-color: rgb(194, 138, 132);
+  color: white;
+}
+
+.food-category-link.SetMenuEksklusif.active,
+.food-category-link.PastaAndMi.active,
+.food-category-link.PencuciMulut.active,
+.food-category-link.Minuman.active {
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(194, 138, 132);
+  color: white;
+  transition: background-color 0.15s;
+}
+
+/*Navigation bar Food Category CSS starts here!*/
+
+/*Food Order Menu CSS starts here!*/
+.food-order-menu-section-div {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0px;
+}
+
+.food-selection-div {
+  width: 725.725px;
+  padding: 0px 15px;
+}
+
+.welcome-text {
+  color: rgb(194, 138, 132);
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.welcome-text-hr {
+  margin: 20px 0px;
+  border: solid;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border-bottom-width: 0.8px;
+  border-color: rgb(202, 202, 202);
+}
+
+section::before {
+  content: "";
+  display: block;
+  height: 180px; /* Adjust this height for offset */
+  margin-top: -180px;
+  visibility: hidden;
+}
+
+.food-category-text {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.food-previews-div {
+  display: grid;
+  grid-template-columns: 377px 377px;
+  margin-bottom: 40px;
+}
+
+.food-preview {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 8px #70707026;;
+  padding: 16px;
+  width: 316px;
+  height: 281px;
+  cursor: pointer;
+}
+
+.food-preview-image {
+  width: 316px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.menu-item-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.menu-item-price {
+  display: inline-block;
+  color: rgb(194, 138, 132);
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 57px;
+}
+
+.decrement-and-increment-button {
+  display: inline-block;
+  height: auto;
+  width: 62px;
+}
+
+.bi bi-dash-lg,
+.bi bi-plus-lg {
+  cursor: pointer;
+}
+
+.quantity {
+  display: inline-block;
+}
+/*Food Order Menu CSS ends here!*/
+
+/*Footer CSS starts here!*/
+
+.footer {
+  padding: 20px 220px 20px 225px;
+  background-color: rgb(234, 228, 216);
+  height: 204px;
+}
+
+.logo-image-footer {
+  width: 90px;
+  height: 90px;
+}
+
+.logo-and-socialmedia-icons-div {
+  display: flex;
+  width: 1103.6px;
+  justify-content: space-between;
+}
+
+.socialmedia-icons-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.socialmedia-icons-subdiv {
+  display: flex;
+
+}
+
+.footer-icon-link {
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  margin-left: 20px;
+  padding: 0px;
+}
+
+.insta-icon,
+.fb-icon {
+  transition: 0.3s ease;
+}
+
+.insta-icon:hover,
+.fb-icon:hover {
+  transform: scale(1.2);
+}
+
+
+.footer-hr {
+  margin-bottom: 15px;
+  border: solid;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border-bottom-width: 0.8px;
+  border-color: rgb(202, 202, 202);
+}
+
+.terms-and-conditions-join-us-div {
+  display: flex;
+  justify-content: center;
+}
+
+.terms-and-conditions-join-us-subdiv {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+}
+
+.terms-and-conditions-join-us-subdiv p {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.terms-and-conditions-join-us-subdiv a {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0px;
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.a-footer-link:hover {
+  transition: color 0.5s;
+  color: rgb(206, 10, 36);
+}
+/*Footer CSS ends here!*/

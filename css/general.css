@@ -1,0 +1,17 @@
+/*General CSS starts here!*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Barlow;
+  font-weight: 600;
+  margin: 0;
+  padding-top: 100px;
+}
+
+p {
+  margin: 0px;
+}
+/*General CSS ends here!*/
